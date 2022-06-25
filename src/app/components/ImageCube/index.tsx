@@ -3,10 +3,10 @@ import { AppState } from "../../../types";
 import useStore from "../../store";
 import { ImageCubeContainer } from "./styles";
 
-import * as THREE from 'three'
-import { Canvas, useLoader  } from "@react-three/fiber";
+import * as THREE from "three";
+import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import defaultTexture from '../../../assets/images/map.jpg'
+import defaultTexture from "../../../assets/images/map.jpg";
 
 export const ImageCube: React.FC = () => {
   const selectedFile = useStore((state: AppState) => state.selectedFile);
@@ -22,8 +22,8 @@ export const ImageCube: React.FC = () => {
         {/* @ts-ignore */}
         <meshLambertMaterial attach="material" map={texture}></meshLambertMaterial>
       </mesh>
-    )
-  }
+    );
+  };
 
   return (
     <ImageCubeContainer>
